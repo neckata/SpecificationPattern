@@ -11,22 +11,30 @@
 
         public Employee[] GetEmployeesByName(string name)
         {
-            return employees.Where(x => x.FirstName == name).ToArray();
+            return employees
+                .Where(x => x.FirstName == name)
+                .ToArray();
         }
 
         public Employee[] GetEmployeesByDepartment(string department)
         {
-            return employees.Where(x => x.Department == department).ToArray();
+            return employees
+                .Where(x => x.Department == department)
+                .ToArray();
         }
 
         public Employee[] GetEmployeesByID(string id)
         {
-            return employees.Where(x => x.EmployeeID == id).ToArray();
+            return employees
+                .Where(x => x.EmployeeID == id)
+                .ToArray();
         }
 
         public Employee[] GetEmployeesByYear(int year)
         {
-            return employees.Where(x => x.YearOfResumption == year).ToArray();
+            return employees
+                .Where(x => x.YearOfResumption == year)
+                .ToArray();
         }
     }
 }

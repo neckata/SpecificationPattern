@@ -24,4 +24,14 @@ foreach (var employee in EmployedIn2017)
     Console.WriteLine(employee.FirstName);
 }
 
+Console.WriteLine();
+
+Console.WriteLine("Employed in Maths Department");
+var specification = new GenericSpecification<Employee>(m => m.Department == "Maths");
+var maths = employees.Where(specification.Expression.Compile()).ToList();
+foreach (var employee in maths)
+{
+    Console.WriteLine(employee.FirstName);
+}
+
 Console.ReadKey();
